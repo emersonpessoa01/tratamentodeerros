@@ -13,9 +13,9 @@ public class Main {
             // Tentativa de dividir por zero
             int resultado = numero / divisor;
             System.out.println("Resultado: " + resultado);
-        } catch (ArithmeticException e) {
+        } catch (ArithmeticException | NullPointerException e) {
             // Tratamento de erro para divisão por zero
-            System.out.println("Erro: Divisão por zero não é permitida.");
+            System.out.println("Erro: Divisão por zero não é permitida." + e.getMessage());
         } finally {
             // Bloco finally sempre executado
             System.out.println("Operação finalizada.");
